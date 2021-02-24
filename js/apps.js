@@ -266,10 +266,53 @@ const pinsir = new Pokemon(`pinsir`, `img/pinsir.jpg`, `Pinsir is astoundingly s
 
 const tauros = new Pokemon(`tauros`, `img/tauros.jpg`, `This Pokémon is not satisfied unless it is rampaging at all times. If there is no opponent for Tauros to battle, it will charge at thick trees and knock them down to calm itself.`, 'Normal', 'Fighting', false, 128);
 
-const magikarp = new Pokemon(`magikarp`, `img/magikarp.jpg`, `Magikarp is a pathetic excuse for a Pokémon that is only capable of flopping and splashing. This behavior prompted scientists to undertake research into it.`, 'Water', 'Grass/Electric', 'Gyrados', 129);
+const magikarp = new Pokemon(`magikarp`, `img/magikarp.jpg`, `Magikarp is a pathetic excuse for a Pokémon that is only capable of flopping and splashing. This behavior prompted scientists to undertake research into it.`, 'Water', 'Grass/Electric', 'Gyarados', 129);
 
+const gyarados = new Pokemon(`gyarados`, `img/gyarados.jpg`, `When Magikarp evolves into Gyarados, its brain cells undergo a structural transformation. It is said that this transformation is to blame for this Pokémon's wildly violent nature.`, 'Water/Flying', 'Electric/Rock', false, 130);
 
-const pokemon = [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard, squirtle, wartortle, blastoise, nidoranF, nidoranM];
+const lapras = new Pokemon(`lapras`, `img/lapras.jpg`, `People have driven Lapras almost to the point of extinction. In the evenings, this Pokémon is said to sing plaintively as it seeks what few others of its kind still remain.`, 'Water/Ice', 'Fighting/Rock/Electric/Grass', false, 131);
+
+const ditto = new Pokemon(`ditto`, `img/ditto.jpg`, `Ditto rearranges its cell structure to transform itself into other shapes. However, if it tries to transform itself into something by relying on its memory, this Pokémon manages to get details wrong.`, 'Normal', 'Fighting', false, 132);
+
+const eevee = new Pokemon(`eevee`, `img/eevee.jpg`, `Eevee has an unstable genetic makeup that suddenly mutates due to the environment in which it lives. Radiation from various stones causes this Pokémon to evolve.`, 'Normal', 'Fighting', 'Vaporeon/Jolteon/Flareon', 133);
+
+const vaporeon = new Pokemon(`vaporeon`, `img/vaporeon.jpg`, `Vaporeon underwent a spontaneous mutation and grew fins and gills that allow it to live underwater. This Pokémon has the ability to freely control water.`, 'Water', 'Grass/Electric', false, 134);
+
+const jolteon = new Pokemon(`jolteon`, `img/jolteon.jpg`, `Jolteon's cells generate a low level of electricity. This power is amplified by the static electricity of its fur, enabling the Pokémon to drop thunderbolts. The bristling fur is made of electrically charged needles.`, 'Electric', 'Ground', false, 135);
+
+const flareon = new Pokemon(`flareon`, `img/flareon.jpg`, `Flareon's fluffy fur has a functional purpose—it releases heat into the air so that its body does not get excessively hot. This Pokémon's body temperature can rise to a maximum of 1,650 degrees Fahrenheit.`, 'Fire', 'Ground/Rock/Water', false, 136);
+
+const porygon = new Pokemon(`porygon`, `img/porygon.jpg`, `Porygon is capable of reverting itself entirely back to program data and entering cyberspace. This Pokémon is copy protected so it cannot be duplicated by copying.`, 'Normal', 'Fighting', false, 137);
+
+const omanyte = new Pokemon(`omanyte`, `img/omanyte.jpg`, `Omanyte is one of the ancient and long-since-extinct Pokémon that have been regenerated from fossils by people. If attacked by an enemy, it withdraws itself inside its hard shell.`, 'Rock/Water', 'Grass/Ground/Fighting/Electric', 'Omastar', 138);
+
+const omastar = new Pokemon(`omastar`, `img/omastar.jpg`, `Omastar uses its tentacles to capture its prey. It is believed to have become extinct because its shell grew too large and heavy, causing its movements to become too slow and ponderous.`, 'Rock/Water', 'Grass/Ground/Fighting/Electric', false, 139);
+
+const kabuto = new Pokemon(`kabuto`, `img/kabuto.jpg`, `Kabuto is a Pokémon that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Pokémon has not changed at all for 300 million years.`, 'Rock/Water', 'Grass/Ground/Fighting/Electric', 'Kabutops', 140);
+
+const kabutops = new Pokemon(`kabutops`, `img/kabuto.jpg`, `Kabutops swam underwater to hunt for its prey in ancient times. The Pokémon was apparently evolving from being a water dweller to living on land as evident from the beginnings of change in its gills and legs.`, 'Rock/Water', 'Grass/Ground/Fighting/Electric', false, 141);
+
+const aerodactly = new Pokemon(`aerodactly`, `img/aerodactly.jpg`, `Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times.`, 'Rock/Flying', 'Ice/Rock/Steel/Water/Electric', false, 142);
+
+const snorlax = new Pokemon(`snorlax`, `img/snorlax.jpg`, `Snorlax's typical day consists of nothing more than eating and sleeping. It is such a docile Pokémon that there are children who use its expansive belly as a place to play.`, 'Normal', 'Fighting', false, 143);
+
+const articuno = new Pokemon(`articuno`, `img/articuno.jpg`, `Articuno is a Legendary Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.`, 'Ice/Flying', 'Rock/Fire/Electric/Steel', false, 144);
+
+const zapdos = new Pokemon(`zapdos`, `img/zapdos.jpg`, `Zapdos is a Legendary Pokémon that has the ability to control electricity. It usually lives in thunderclouds. The Pokémon gains power if it is stricken by lightning bolts.`, 'Electric/Flying', 'Ice/Rock', false, 145);
+
+const moltres = new Pokemon(`moltres`, `img/moltres.jpg`, `Moltres is a Legendary Pokémon that has the ability to control fire. If this Pokémon is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself.`, 'Fire/Flying', 'Rock/Electric/Water', false, 146);
+
+const dratini = new Pokemon(`dratini`, `img/dratini.jpg`, `Dratini continually molts and sloughs off its old skin. It does so because the life energy within its body steadily builds to reach uncontrollable levels.`, 'Dragon', 'Fairy/Dragon/Ice', 'Dragonair', 147);
+
+const dragonair = new Pokemon(`dragonair`, `img/dragonair.jpg`, `Dragonair stores an enormous amount of energy inside its body. It is said to alter weather conditions in its vicinity by discharging energy from the crystals on its neck and tail.`, 'Dragon', 'Fairy/Dragon/Ice', 'Dragonite', 148);
+
+const dragonite = new Pokemon(`dragonite`, `img/dragonite.jpg`, `Dragonite is capable of circling the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land.`, 'Dragon/Flying', 'Ice/Fairy/Dragon/Rock', false, 149);
+
+const mewtwo = new Pokemon(`mewtwo`, `img/mewtwo.jpg`, `Mewtwo is a Pokémon that was created by genetic manipulation. However, even though the scientific power of humans created this Pokémon's body, they failed to endow Mewtwo with a compassionate heart.`, 'Psychic', 'Bug/Dark/Ghost', false, 150);
+
+const mew = new Pokemon(`mew`, `img/mew.jpg`, `Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.`, 'Psychic', 'Bug/Dark/Ghost', false, 151);
+
+const pokemon = [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard, squirtle, wartortle, blastoise, caterpie, metapod, butterfree, weedle, kakuna, beedrill, pidgey, pidgeotto, pidgeot, rattata, raticate, spearow, fearow, ekans, arbok, pikachu, raichu, sandshrew, sandslash, nidoranF, nidorina, nidoqueen, nidoranM, nidorino, nidoking, clefairy, clefable, vulpix, ninetales, jigglypuff, wigglytuff, zubat, golbat, oddish, gloom, vileplume, paras, parasect, venonat, venomoth, diglett, dugtrio, meowth, persian, psyduck, golduck, mankey, primeape, growlithe, arcanine, poliwag, poliwhirl, poliwrath, abra, kadabra, alakazam, machop, machoke, machamp, bellsprout, weepinbell, victreebel, tentacool, tentacruel, geodude, graveler, golem, ponyta, rapidash, slowpoke, slowbro, magnemite, magneton, farfetchd, doduo, dodrio, seel, dewgong, grimer, muk, shellder, cloyster, gastly, haunter, gengar, onix, drowzee, hypno, krabby, kingler, voltorb, electrode, exeggcute, exeggutor, cubone, marowak, hitmonlee, hitmonchan, lickitung, koffing, weezing, rhyhorn, rhydon, chansey, tangela, kangaskhan, horsea, seadra, goldeen, seaking, staryu, starmie, mrMime, scyther, jynx, electabuzz, magmar, pinsir, tauros, magikarp, gyarados, lapras, ditto, eevee, vaporeon, jolteon, flareon, porygon, omanyte, omastar, kabuto, kabutops, aerodactly, snorlax, articuno, zapdos, moltres, dratini, dragonair, dragonite, mewtwo, mew];
 
 
 function pokeSearch() {
@@ -283,9 +326,11 @@ function pokeSearch() {
         let search = input.value.toLowerCase();
 
         for(let i = 0; i < pokemon.length; i++){
-            if(pokemon[i].name.includes(search)) {
-                console.log(pokemon[i].name);
-            }
+            console.log(pokemon[i].name);
+
+            // if(pokemon[i].name.includes(search)) {
+            //     console.log(pokemon[i].name);
+            // }
         }
     })
 };
