@@ -17,32 +17,26 @@
     <button class="menu-btn">
         Menu
     </button>
+    <menu>
+        <ul>
+            <li><a href="index.html">Pokedex</a></li>
+            <li><a href="bens-journey.html">Ben's Journey</a></li>
+            <li><a href="name-that-pokemon.html">NTP!</a></li>
+        </ul>
+    </menu>
 </header>
 <body>
     <main>
         <section class="section pokedex">
-            <form class="example" action="action_page.php">
+            <form class="search" autocomplete="off">
                 <input type="text" placeholder="Search.." name="search">
-                <button type="submit" class="submit">Go!</button>
-              </form>
-
-            <div class="pokemon-selection">
-                <img src="img/wartortle.jpg" alt="wartortle">
-                <h2>Wartortle</h2>
-                <p>Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokemon's toughness as a battler.</p>
-                <div id="info">
-                    <p>Strength: Fire</p>
-                    <p>Weakness: Thunder</p>
-                    <p class="number">008/151</p>
-                </div>
+                <button class="submit">Go!</button>
+            </form>
+            <div class="wrapper">
+                <div class="pokemon-selection"></div>
             </div>
-            
-        </section>
-
-        
-
-        
     </main>
 </body>
 <script src="js/apps.js"></script>
+<script src="js/pokedex.js"></script>
 </html>
