@@ -111,6 +111,7 @@ h1 {
         font-size: 1.25em;
         font-family: "helvetica";
         box-shadow: inset 0px 0px 5px #111;
+        padding-left: .5em;
     }
 
     .error::placeholder {
@@ -129,6 +130,53 @@ h1 {
 
     .container {
         background-color: #D8D8CC;
+        box-shadow: inset 0px 0px 5px #111;
+    }
+
+    .nidoran {
+        min-height: 75vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nidoran p {
+        font-size: 1.5em;
+    }
+
+    .nidoran ul {
+        height: 30vh;
+        width: 90%;
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .nidoran li {
+        width: 95%;
+        font-size: 3em;
+        min-height: 5vh;
+        text-align: center;
+    }
+
+    .no-results {
+        text-align: center;
+        min-height: 75vh;
+    }
+
+    .no-results h4 {
+        font-size: 2em;
+    }
+
+    .no-results p {
+        font-size: 1.5em;
+        width: 90%;
+        margin: 2vh auto;
     }
 
     .pokemon-selection {

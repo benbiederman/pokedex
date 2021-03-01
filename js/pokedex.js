@@ -332,7 +332,7 @@ function pokemonSearch() {
             input.classList.add('error');
             searchResults = null;
         } else if (search === 'nidoran') {
-            console.log('nidoran');
+            nidoranSearch()
             searchResults++;
         } else if (search === 'growlithe') {
             pokemonFound(growlithe);
@@ -350,12 +350,15 @@ function pokemonSearch() {
             pokemonNotFound();
         }
         
+        //Resets input value
         input.value = '';
     })
 
     
 }
 
+
+//Builds Pokedex result when valid
 function pokemonFound(pokemon){
     const pokemonSelection = document.querySelector('.pokemon-selection');
 
@@ -467,6 +470,18 @@ function pokemonFound(pokemon){
     }
     evolutionLevelDiv.appendChild(evolutionLevel);
 
+    const weaknessDiv = document.createElement('div');
+    evolutionTypeDiv.classList.add('info');
+    pokemonInfo.appendChild(weaknessDiv);
+
+    const weaknessHeader = document.createElement('p');
+    weaknessHeader.textContent = 'Weak against:';
+    weaknessDiv.appendChild(weaknessHeader);
+
+    const weakness = document.createElement('h4');
+    weakness.textContent = pokemon.weakness;
+    weaknessDiv.appendChild(weakness);
+
     const pokemonNumber = document.createElement('p');
     pokemonNumber.classList.add('numbers');
     pokemonNumber.textContent = `${pokemon.number}/151`;
@@ -475,18 +490,98 @@ function pokemonFound(pokemon){
 
 }
 
+//Runs when Search doesn't match Pokemon
 function pokemonNotFound(){
     const pokemonSelection = document.querySelector('.pokemon-selection');
 
-    if(pokemonSelection !== ''){
+    const surprisedPikachu = {
+        name: 'Surprised Pikachu',
+        picture: `img/surprised-pikachu.png`
+    }
+
+    if(pokemonSelection.innerHTML !== ''){
         pokedexClear()
     }
+
+    const container = document.createElement('div');
+    container.classList.add('container');
+    pokemonSelection.appendChild(container);
+
+    const noResults = document.createElement('div');
+    noResults.classList.add('no-results');
+    container.appendChild(noResults);
+
+    const noResultsFigure = document.createElement('figure');
+    noResults.appendChild(noResultsFigure);
+
+    const noResultsImg = document.createElement('img');
+    noResultsImg.src = surprisedPikachu.picture;
+    noResultsImg.alt = surprisedPikachu.name;
+    noResultsFigure.appendChild(noResultsImg);
+
+    const noResultsH4 = document.createElement('h4');
+    noResultsH4.textContent = `No results found.`;
+    noResults.appendChild(noResultsH4);
+
+    const noResultsP = document.createElement('p');
+    noResultsP.textContent = `Check your spelling or search again.`;
+    noResults.appendChild(noResultsP);
+
+
 }
 
+//Clears results
 function pokedexClear(){
     const pokemonSelection = document.querySelector('.pokemon-selection');
     const container = document.querySelector('.container');
     pokemonSelection.removeChild(container);
+}
+
+//Runs when Nidoran is searched
+function nidoranSearch(){
+    const pokemonSelection = document.querySelector('.pokemon-selection');
+
+    if(pokemonSelection.innerHTML !== ''){
+        pokedexClear()
+    }
+
+    const container = document.createElement('div');
+    container.classList.add('container');
+    pokemonSelection.appendChild(container);
+
+    const nidoranDiv = document.createElement('div');
+    nidoranDiv.classList.add('nidoran');
+    container.appendChild(nidoranDiv);
+
+    const searchResults = document.createElement('p');
+    searchResults.textContent = '2 results found.';
+    nidoranDiv.appendChild(searchResults);
+
+    const selection = document.createElement('p');
+    selection.textContent = 'Which would you like?';
+    nidoranDiv.appendChild(selection);
+
+    const ul = document.createElement('ul');
+    nidoranDiv.append(ul);
+
+    const nidoranFemale = document.createElement('li');
+    nidoranFemale.textContent = nidoranF.name;
+    ul.appendChild(nidoranFemale);
+
+    nidoranFemale.addEventListener('click', () => {
+        pokemonFound(nidoranF);
+    })
+
+    const nidoranMale = document.createElement('li');
+    nidoranMale.textContent = nidoranM.name;
+    ul.appendChild(nidoranMale);
+
+    nidoranMale.addEventListener('click', () => {
+        pokemonFound(nidoranM);
+    })
+
+
+
 }
 
 
