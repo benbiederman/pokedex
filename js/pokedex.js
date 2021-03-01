@@ -12,11 +12,11 @@ class Pokemon {
     }
 }
 
-const bulbasaur = new Pokemon('bulbasaur', `img/bulbasaur.jpg`, `Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.`, 'Grass/Poison', 'Fire/Flying/Ice/Psychic', 'ivysaur', 'Normal', 16, 01);
+const bulbasaur = new Pokemon('bulbasaur', `img/bulbasaur.jpg`, `Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.`, 'Grass', 'Fire/Flying/Ice/Psychic', 'ivysaur', 'Normal', 16, 01);
 
-const ivysaur = new Pokemon('ivysaur', `img/ivysaur.jpg`, `There is a bud on this Pokémon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon.`, 'Grass/Poison', 'Fire/Flying/Ice/Psychic', 'venusaur', 'Normal', 21, 02);
+const ivysaur = new Pokemon('ivysaur', `img/ivysaur.jpg`, `There is a bud on this Pokémon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon.`, 'Grass', 'Fire/Flying/Ice/Psychic', 'venusaur', 'Normal', 32, 02);
 
-const venusaur = new Pokemon('venusaur', `img/venusaur.jpg`, `There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.`, 'Grass/Poison', 'Fire/Flying/Ice/Psychic', false, 'Normal', false, 03);
+const venusaur = new Pokemon('venusaur', `img/venusaur.jpg`, `There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.`, 'Grass', 'Fire/Flying/Ice/Psychic', false, 'Normal', false, 03);
 
 const charmander = new Pokemon('charmander', `img/charmander.jpg`, `The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.`, 'Fire', 'Ground/Rock/Water', 'charmeleon', 'Normal', 16, 04);
 
@@ -30,7 +30,7 @@ const wartortle = new Pokemon('wartortle', `img/wartortle.jpg`, `Its tail is lar
 
 const blastoise = new Pokemon('blastoise', `img/blastoise.jpg`, `Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.`, 'Water', 'Grass/Electric', false, 'Normal', false, 09);
 
-const caterpie = new Pokemon('caterpie', `img/caterpie.jpg`, `Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.`, 'Grass', 'Fire/Flying/Rock', `metapod`, 'Nomral', 7, 10);
+const caterpie = new Pokemon('caterpie', `img/caterpie.jpg`, `Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.`, 'Grass', 'Fire/Flying/Rock', `metapod`, 'Normal', 7, 10);
 
 const metapod = new Pokemon('metapod', `img/metapod.jpg`, `The shell covering this Pokémon's body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell.`, 'Grass', 'Fire/Flying/Rock', `butterfree`, 'Normal', 10, 11);
 
