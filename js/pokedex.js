@@ -192,7 +192,7 @@ const muk = new Pokemon(`muk`, `img/muk.jpg`, `From Muk's body seeps a foul flui
 
 const shellder = new Pokemon(`shellder`, `img/shellder.jpg`, `At night, this Pokémon uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, Shellder closes its shell, but leaves its tongue hanging out.`, 'Water', 'Grass/Electric', 'cloyster', 'Water Stone', false, 90);
 
-const cloyster = new Pokemon(`cloyster`, `img/cloyster.jpg`, `Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Pokémon shoots spikes from its shell using the same system.`, 'Water/Ice', 'Fighting/Rock/Electric/Grass', false, 'Water Stone', false, 91);
+const cloyster = new Pokemon(`cloyster`, `img/cloyster.jpg`, `Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Pokémon shoots spikes from its shell using the same system.`, 'Water', 'Fighting/Rock/Electric/Grass', false, 'Water Stone', false, 91);
 
 const gastly = new Pokemon(`gastly`, `img/gastly.jpg`, `Gastly is largely composed of gaseous matter. When exposed to a strong wind, the gaseous body quickly dwindles away. Groups of this Pokémon cluster under the eaves of houses to escape the ravages of wind.`, 'Psychic', 'Dark/Ground/Ghost/Psychic', 'haunter', 'Normal', 25, 92);
 
@@ -232,7 +232,7 @@ const koffing = new Pokemon(`koffing`, `img/koffing.jpg`, `If Koffing becomes ag
 
 const weezing = new Pokemon(`weezing`, `img/weezing.jpg`, `Weezing loves the gases given off by rotted kitchen garbage. This Pokémon will find a dirty, unkempt house and make it its home. At night, when the people in the house are asleep, it will go through the trash.`, 'Grass', 'Psychic/Ground', false, 'Normal', false, 110);
 
-const rhyhorn = new Pokemon(`rhyhorn`, `img/rhyhorn.jpg`, `Rhyhorn runs in a straight line, smashing everything in its path. It is not bothered even if it rushes headlong into a block of steel. This Pokémon may feel some pain from the collision the next day, however.`, 'Ground/Rock', 'Water/Grass/Ground/Ice/Steel/Fighting', 'rhydon', 'Normal', 42, 111);
+const rhyhorn = new Pokemon(`rhyhorn`, `img/rhyhorn.jpg`, `Rhyhorn runs in a straight line, smashing everything in its path. It is not bothered even if it rushes headlong into a block of steel. This Pokémon may feel some pain from the collision the next day, however.`, 'Ground', 'Water/Grass/Ground/Ice/Steel/Fighting', 'rhydon', 'Normal', 42, 111);
 
 const rhydon = new Pokemon(`rhydon`, `img/rhydon.jpg`, `Rhydon's horn can crush even uncut diamonds. One sweeping blow of its tail can topple a building. This Pokémon's hide is extremely tough. Even direct cannon hits don't leave a scratch.`, 'Ground', 'Water/Grass/Ground/Ice/Steel/Fighting', false, 'Normal', false, 112);
 
@@ -290,11 +290,11 @@ const omanyte = new Pokemon(`omanyte`, `img/omanyte.jpg`, `Omanyte is one of the
 
 const omastar = new Pokemon(`omastar`, `img/omastar.jpg`, `Omastar uses its tentacles to capture its prey. It is believed to have become extinct because its shell grew too large and heavy, causing its movements to become too slow and ponderous.`, 'Water', 'Grass/Ground/Fighting/Electric', false, 'Normal', false, 139);
 
-const kabuto = new Pokemon(`kabuto`, `img/kabuto.jpg`, `Kabuto is a Pokémon that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Pokémon has not changed at all for 300 million years.`, 'Ground', 'Grass/Ground/Fighting/Electric', 'kabutops', 'Norma', 40, 140);
+const kabuto = new Pokemon(`kabuto`, `img/kabuto.jpg`, `Kabuto is a Pokémon that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Pokémon has not changed at all for 300 million years.`, 'Ground', 'Grass/Ground/Fighting/Electric', 'kabutops', 'Normal', 40, 140);
 
 const kabutops = new Pokemon(`kabutops`, `img/kabuto.jpg`, `Kabutops swam underwater to hunt for its prey in ancient times. The Pokémon was apparently evolving from being a water dweller to living on land as evident from the beginnings of change in its gills and legs.`, 'Ground', 'Grass/Ground/Fighting/Electric', false, 'Normal', false,  141);
 
-const aerodactly = new Pokemon(`aerodactly`, `img/aerodactly.jpg`, `Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times.`, 'Ground', 'Ice/Rock/Steel/Water/Electric', false, false, false, 142);
+const aerodactyl = new Pokemon(`aerodactly`, `img/aerodactyl.jpg`, `Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times.`, 'Ground', 'Ice/Rock/Steel/Water/Electric', false, false, false, 142);
 
 const snorlax = new Pokemon(`snorlax`, `img/snorlax.jpg`, `Snorlax's typical day consists of nothing more than eating and sleeping. It is such a docile Pokémon that there are children who use its expansive belly as a place to play.`, 'Normal', 'Fighting', false, false, false, 143);
 
@@ -314,7 +314,7 @@ const mewtwo = new Pokemon(`mewtwo`, `img/mewtwo.jpg`, `Mewtwo is a Pokémon tha
 
 const mew = new Pokemon(`mew`, `img/mew.jpg`, `Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.`, 'Psychic', 'Bug/Dark/Ghost', false, false, false, 151);
 
-const pokemon = [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard, squirtle, wartortle, blastoise, caterpie, metapod, butterfree, weedle, kakuna, beedrill, pidgey, pidgeotto, pidgeot, rattata, raticate, spearow, fearow, ekans, arbok, pikachu, raichu, sandshrew, sandslash, nidoranF, nidorina, nidoqueen, nidoranM, nidorino, nidoking, clefairy, clefable, vulpix, ninetales, jigglypuff, wigglytuff, zubat, golbat, oddish, gloom, vileplume, paras, parasect, venonat, venomoth, diglett, dugtrio, meowth, persian, psyduck, golduck, mankey, primeape, growlithe, arcanine, poliwag, poliwhirl, poliwrath, abra, kadabra, alakazam, machop, machoke, machamp, bellsprout, weepinbell, victreebel, tentacool, tentacruel, geodude, graveler, golem, ponyta, rapidash, slowpoke, slowbro, magnemite, magneton, farfetchd, doduo, dodrio, seel, dewgong, grimer, muk, shellder, cloyster, gastly, haunter, gengar, onix, drowzee, hypno, krabby, kingler, voltorb, electrode, exeggcute, exeggutor, cubone, marowak, hitmonlee, hitmonchan, lickitung, koffing, weezing, rhyhorn, rhydon, chansey, tangela, kangaskhan, horsea, seadra, goldeen, seaking, staryu, starmie, mrMime, scyther, jynx, electabuzz, magmar, pinsir, tauros, magikarp, gyarados, lapras, ditto, eevee, vaporeon, jolteon, flareon, porygon, omanyte, omastar, kabuto, kabutops, aerodactly, snorlax, articuno, zapdos, moltres, dratini, dragonair, dragonite, mewtwo, mew];
+const pokemon = [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard, squirtle, wartortle, blastoise, caterpie, metapod, butterfree, weedle, kakuna, beedrill, pidgey, pidgeotto, pidgeot, rattata, raticate, spearow, fearow, ekans, arbok, pikachu, raichu, sandshrew, sandslash, nidoranF, nidorina, nidoqueen, nidoranM, nidorino, nidoking, clefairy, clefable, vulpix, ninetales, jigglypuff, wigglytuff, zubat, golbat, oddish, gloom, vileplume, paras, parasect, venonat, venomoth, diglett, dugtrio, meowth, persian, psyduck, golduck, mankey, primeape, growlithe, arcanine, poliwag, poliwhirl, poliwrath, abra, kadabra, alakazam, machop, machoke, machamp, bellsprout, weepinbell, victreebel, tentacool, tentacruel, geodude, graveler, golem, ponyta, rapidash, slowpoke, slowbro, magnemite, magneton, farfetchd, doduo, dodrio, seel, dewgong, grimer, muk, shellder, cloyster, gastly, haunter, gengar, onix, drowzee, hypno, krabby, kingler, voltorb, electrode, exeggcute, exeggutor, cubone, marowak, hitmonlee, hitmonchan, lickitung, koffing, weezing, rhyhorn, rhydon, chansey, tangela, kangaskhan, horsea, seadra, goldeen, seaking, staryu, starmie, mrMime, scyther, jynx, electabuzz, magmar, pinsir, tauros, magikarp, gyarados, lapras, ditto, eevee, vaporeon, jolteon, flareon, porygon, omanyte, omastar, kabuto, kabutops, aerodactyl, snorlax, articuno, zapdos, moltres, dratini, dragonair, dragonite, mewtwo, mew];
 
 pokemonSearch();
 
@@ -339,7 +339,7 @@ function pokemonSearch() {
             searchResults++;
         } else {
             for(let i = 0; i < pokemon.length; i++){
-                if(pokemon[i].name === search){
+                if(pokemon[i].name === search || pokemon[i].number == search){
                     pokemonFound(pokemon[i]);
                     searchResults++;
                 }
