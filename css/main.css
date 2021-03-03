@@ -258,11 +258,57 @@ h1 {
     }
 
     /* Gotta Catch Em all */
-    .gcea-section {
+    .gcea {
         min-height: 92vh;
-        padding: 1em 0;
     }
 
+    .about {
+        background-color: #ebebeb;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .gcea-container {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .gcea-container img {
+        width: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about h2, .about h4  {
+        font-family: "Didact Gothic";
+        font-size: 1.5em;
+    }
+
+    .about p {
+        font-family: "Didact Gothic";
+        font-size: 1.25em;
+    }
+
+    .progress {
+        margin-top: 2rem;
+    }
+
+    .pokemon-entry {
+        width: 80%;
+        margin: 1rem auto;
+        font-family: "Didact Gothic";
+        text-align: center;
+    }
+
+    .pokemon-entry img{
+        width: 95%;
+        margin-top: 2.5%
+    }
+
+    .uncaught {
+        filter: grayscale(1);
+    }
 
 }
 
@@ -299,6 +345,52 @@ h1 {
 
     .pokemon-selection p {
         font-size: 1.25em;
+    }
+
+     /* Gotta Catch Em all */
+    .about {
+        padding: 1rem 0;
+    }
+
+    .gcea-container {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .gcea-container img {
+        width: 40%;
+    }
+
+    .bio {
+        width: 50%;
+    }
+
+
+    .progress {
+        width: 70%;
+        margin: 2rem auto 1rem auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .pokemon-entry {
+        width: 40%;
+    }
+
+    .pokemon-entry img{
+        width: 95%;
+        margin-top: 2.5%
+    }
+
+    .bens-pokedex {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
 
@@ -363,6 +455,19 @@ h1 {
 
     .numbers {
         top: 0;        
+    }
+
+    /* Gotta Catch Em all */
+    .about {
+        padding: .5rem 0;
+    }
+
+    .gcea-container img {
+        width: 20%;
+    }
+
+    .pokemon-entry {
+        width: 30%;
     }
 
 

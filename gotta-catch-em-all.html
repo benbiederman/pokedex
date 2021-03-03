@@ -5,7 +5,7 @@
     <link href="/css/main.css" type="text/css" rel="stylesheet">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Londrina+Solid:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=DotGothic16&family=Londrina+Solid:wght@400;900&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -35,14 +35,46 @@
         <section class="section gcea">
             <section class="about">
                 <div class="gcea-container">
-                    <img src="/img/ben.png" alt="Pokemon Red character"
+                    <img src="/img/ben.png" alt="Pokemon Red character">
+                    <div class="bio">
+                        <h2>Hi, I'm Ben</h2>
+                        <p>Since 1998 I've had the dream of catching 'em all. Although I'm in my 30s now, the dream is still alive and well. It's time to complete that dream. This is my Pokedex - my progress into achieving my childhood dreams and goals.</p>
+                    </div>
+
+                    <div class="progress">
+                        <h4>Seen: X</h4>
+                        <h4>Caught: X</h4>
+                    </div>
                 </div>
             </section>
             <form class="search" autocomplete="off">
                 <input type="text" placeholder="Search.." name="search">
                 <button class="btn submit">Go!</button>
-                <button class="btn more">...</button>
+                <button class="btn more">&#9660;</button>
             </form>
+
+            <div class="bens-pokedex">
+                <div class="pokemon-entry caught">
+                    <figure>
+                        <img src="img/wartortle.jpg">
+                    </figure>
+                    <h2>#006 - Wartortle</h2>
+                </div>
+
+                <div class="pokemon-entry uncaught">
+                    <figure>
+                        <img src="img/wartortle.jpg">
+                    </figure>
+                    <h2>Wartortle</h2>
+                </div>
+
+                <div class="pokemon-entry uncaught">
+                    <figure>
+                        <img src="img/wartortle.jpg">
+                    </figure>
+                    <h2>Wartortle</h2>
+                </div>
+            </div>
         </section>
     </main>
     <script src="js/apps.js"></script>
