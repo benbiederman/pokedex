@@ -368,6 +368,33 @@ function buildResults(pokemon) {
     pokedexContainer.classList.add('pokedex-container');
     pokedexScreen.appendChild(pokedexContainer);
 
+    switch(pokemon.element) {
+        case 'Electric':
+            pokedexContainer.style.backgroundColor = '#F6E184';
+            break;
+        case 'Psychic':
+            pokedexContainer.style.backgroundColor = '#BA8AAF';
+            break;
+        case 'Fire':
+            pokedexContainer.style.backgroundColor = '#EB7D75';
+            break;
+        case 'Ground':
+            pokedexContainer.style.backgroundColor = '#8B7057';
+            break;
+        case 'Water':
+            pokedexContainer.style.backgroundColor = '#7EB1D9';
+            break;
+        case 'Normal':
+            pokedexContainer.style.backgroundColor = '#D5CBC1';
+            break;
+        case 'Grass':
+            pokedexContainer.style.backgroundColor = '#94A568';
+            break;
+        default:
+            pokedexContainer.style.backgroundColor = '#E9E9E9';
+            break;
+    }
+
     //Creates Basic Info section
     const pokemonBasicInfo = document.createElement('div');
     pokemonBasicInfo.classList.add('pokedex-basic-info');
