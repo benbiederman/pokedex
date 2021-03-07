@@ -8,9 +8,11 @@ function menu() {
         if(menu.classList.contains('menu-active')){
             menuBtn.innerHTML = 'Close';
             menuBtn.style.backgroundColor = '#F7C901'
+            menuBtn.style.boxShadow = '0px 0px 10px #505050';
         } else {
             menuBtn.innerHTML = 'Menu';
             menuBtn.style.backgroundColor = '#ffef02'
+            menuBtn.style.boxShadow = '0px 0px 10px #111';
             
         }
     })

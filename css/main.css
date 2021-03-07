@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 h1 {
@@ -12,25 +11,11 @@ h1 {
     letter-spacing: 2px;
 }
 
-.menu-btn {
-    background-color: #ffef02;
-    width: 30vw;
-    min-height: 5vh;
-    color: #df0528;
-    font-family: "londrina solid", Helvetica;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 2em;
-    box-shadow: 0px 0px 5px #111;
-    outline: none
-
-}
-
 #info p {
     text-align: center;
     
 }
+
 
 
 @media only screen and (min-width: 100px) {
@@ -42,7 +27,6 @@ h1 {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        box-shadow: inset 0px 0px 5px #111;
         z-index: 50;
     }
 
@@ -55,12 +39,27 @@ h1 {
         top: 8vh;
         left: -100vw;
         width: 100%;
-        height: 90vh;
+        height: 92vh;
         background-color: #df0528;
         transition: all 0.5s ease;
         text-align: center;
         z-index: 50;
 
+    }
+
+    .menu-btn {
+        background-color: #ffef02;
+        min-width: 30vw;
+        min-height: 5vh;
+        color: #df0528;
+        font-family: "londrina solid", Helvetica;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 2em;
+        border: none;
+        box-shadow: 0px 0px 10px #111;
+        outline: none
     }
 
     .menu-active {
@@ -90,387 +89,245 @@ h1 {
     }
 
     /* Pokedex - Mobile */
-
-    .pokedex {
-        background-color: #df0528;
-        min-height: 92vh;
+    .pokedex-section {
         width: 100%;
-        padding: 1em 0;
+        min-height: 92vh;
+        background-color: #df0528;
+        padding: 2rem 0;
+    }
+
+    .section form {
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
 
     .search {
-        width: 90%;
-        margin: 0 auto;
-        display: flex;
-        margin-bottom: 1em;
-    }
-
-    .search input {
+        width: 80%;
+        min-height: 40px;
+        padding-left: .5rem;
+        font-family: "Didact Gothic", helvetica, sans-serif;
         flex: 1;
-        min-height: 5vh;
+        border: none;
         font-size: 1.25em;
-        font-family: "helvetica";
-        box-shadow: inset 0px 0px 5px #111;
-        padding-left: .5em;
+        border-radius: 5px 0 0 5px;
     }
 
     .error::placeholder {
-        color: red;
+        color: #df0528;
+        font-weight: bold;
     }
 
-    .btn {
-        min-width: 10%;
+    .search-btn {
+        min-width: 12.5%;
+        padding: .2rem;
         font-family: "londrina solid", Helvetica;
+        min-height: 40px;
+        margin: 0;
+        border: none;
+        font-size: 1.5em;
         background-color: #111;
         color: #fcfcfc;
-        font-size: 2em;
-        padding: 0 .25em;
+        text-transform: uppercase;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .pokedex-screen {
+        background-color: #e9e9e9;
+        width: 85%;
+        margin: 1rem auto;
+        min-height: 70vh;
+        border-radius: 5px;
+        font-family: "DotGothic16";
+        font-size: 1.5em;
+        color: #111
+    }
+    
+    .pokedex-container {
+        width: 100%;
+        min-height: 70vh;
+        text-align: center;
+        position: relative;
+    }
+
+    .pokedex-container h3 {
+        padding: 1rem 0;
+        border-bottom: 2px dashed #595959;
         text-transform: uppercase;
     }
 
-    .container {
-        background-color: none;
-        box-shadow: inset 0px 0px 5px #111;
+    .search-results {
+        max-height: 60vh;
+        overflow-y: scroll;
     }
 
-    .nidoran {
-        min-height: 75vh;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .nidoran p {
-        font-size: 1.5em;
-    }
-
-    .nidoran ul {
-        height: 30vh;
-        width: 90%;
-        margin: 0 auto;
+    .search-results ul {
+        width: 100%;
         list-style: none;
-        display: flex;
-        flex-direction: column;
-        background-color: transparent;
-        align-items: center;
-        justify-content: space-evenly;
     }
 
-    .nidoran li {
-        width: 95%;
-        font-size: 3em;
-        min-height: 5vh;
-        text-align: center;
-    }
-
-    .no-results {
-        text-align: center;
-        min-height: 75vh;
-    }
-
-    .no-results h4 {
-        font-size: 2em;
-    }
-
-    .no-results p {
-        font-size: 1.5em;
-        width: 90%;
-        margin: 2vh auto;
-    }
-
-    .pokemon-selection {
-        width: 90%;
-        margin: 0 auto;
-        min-height: 75vh;
-        border-radius: 5px;
-        font-family: "DotGothic16";
-        position: relative;
-        z-index: 5;
-        box-shadow: inset 0px 0px 5px #111;
-        background-color: #D8D8CC;
-    }
-
-    .pokemon, .pokemon-info {
-        width: 95%;
-        min-height: 70vh;
-        margin: 0 auto;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding-bottom: .2em;
-    }
-
-    .pokemon-selection figure {
-        width: 100%;
-    }
-
-    .pokemon img {
-        width: 100%;
-        margin-top: 2.5%;
-    }
-
-    .info {
-        width: 100%;
-    }
-
-    .info img {
-        width: 50%;
-        margin-top: 2.5%;
-        cursor: pointer;
-    }
-
-    .pokemon-details {
-        width: 100%;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        border-bottom: 2px dashed #111;
-    }
-
-    .pokemon-info h4 {
-        font-size: 1.5em;
-        word-wrap:break-word;   
-    }
-
-    .pokemon h2 {
-        font-size: 2.25em;
-    }
-
-    .pokemon-details p {
-        flex: 1;
-        width: 90%;
-        margin: 2.5vh auto 0 auto;
-        padding-bottom: 1em;
-        
-    }
-
-    .numbers {
-        position: absolute;
-        bottom: 0;
-        border-bottom: none;
-        right: 2.5%;
-        border-bottom: none;
-        
-    }
-
-    /* Gotta Catch Em all */
-    .gcea {
-        min-height: 92vh;
-    }
-
-    .about {
-        background-color: #ebebeb;
-        padding-bottom: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .gcea-container {
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .gcea-container img {
-        width: 50%;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .about h2, .about h4  {
-        font-family: "Didact Gothic";
-        font-size: 1.5em;
-    }
-
-    .about p {
-        font-family: "Didact Gothic";
+    .search-results li {
+        padding: .2em 0;
         font-size: 1.25em;
     }
 
-    .progress {
-        margin-top: 2rem;
+    .pokedex-basic-info {
+        padding: 2.5% 0 1rem 0;
+        width: 95%;
+        margin: 0 auto;
+        min-height: 70vh;
+        border-bottom: 2px dashed #595959;
     }
 
-    .pokemon-entry {
-        width: 80%;
+    .no-results {
+        border-bottom: none;
+    }
+
+    .pokedex-basic-info img {
+        width: 100%;
+    }
+
+    .pokedex-basic-info p {
+        font-size: .8em;
+        width: 85%;
         margin: 1rem auto;
-        font-family: "Didact Gothic";
+        text-align: left;
+    }
+
+    .no-results p {
         text-align: center;
     }
 
-    .pokemon-entry img{
-        width: 95%;
-        margin-top: 2.5%
+    .pokedex-advanced-info {
+        padding: 1rem 0;
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
-    .uncaught {
-        filter: grayscale(1);
+    .pokedex-advanced-info img {
+        width: 50%;
+        padding-top: .5rem;
+        margin: 0 auto;
+        cursor: pointer;
     }
 
+    .info {
+        margin: 1rem 0;
+    }
+
+    .info p {
+        margin-top: -.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .number {
+        position: absolute;
+        bottom: 0rem;
+        right: .5rem;
+        font-size: .7em;
+    }
+
+    footer {
+        min-height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #df0528;
+        text-align: center;
+    }
+
+    footer p {
+        width: 80%;
+        padding: 1rem 0;
+        font-family: "Didact Gothic";
+    }
 }
 
 @media only screen and (min-width: 768px) {
     
+    /* Menu - Tablet */
+    .menu-btn {
+        min-width: 15vw;
+    }
+
     /* Pokedex - Tablet */
-    .search {
-        width: 65%;
+    .pokedex-section form {
+        width: 60%;
+         
     }
 
-    .pokemon-selection {
+    .pokedex-screen {
         width: 70%;
     }
 
-    .pokemon-selection figure {
-        width: 100%;
+    .pokedex-basic-info p {
+        font-size: 1em;
     }
-
-    .pokemon-details {
-        width: 100%;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .pokemon-details p {
-        width: 70%;
-    }
-
-    .pokemon-info h4 {
-        font-size: 1.75em;    
-    }
-
-    .pokemon-selection p {
-        font-size: 1.25em;
-    }
-
-     /* Gotta Catch Em all */
-    .about {
-        padding: 1rem 0;
-    }
-
-    .gcea-container {
-        width: 70%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .gcea-container img {
-        width: 40%;
-    }
-
-    .bio {
-        width: 50%;
-    }
-
-
-    .progress {
-        width: 70%;
-        margin: 2rem auto 1rem auto;
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .pokemon-entry {
-        width: 40%;
-    }
-
-    .pokemon-entry img{
-        width: 95%;
-        margin-top: 2.5%
-    }
-
-    .bens-pokedex {
-        width: 90%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-
     
 }
 
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
 
+    /* Menu - Desktop */
+    .menu-btn {
+        min-width: 10vw;
+    }
 
     /* Pokedex - Desktop */
-    .search {
-        width: 40%;
+    .pokedex-section form {
+        width: 30%;        
     }
 
-    .submit {
-        font-size: 1.75em;
-    }
-
-    .pokemon-selection {
+    .pokedex-screen {
         width: 90%;
-        min-height: 75vh;
+        min-height: 70vh;
     }
 
-    .pokemon {
-        width: 80%;
+    .pokedex-container {
+        min-height: 70vh;
     }
 
-    .pokemon-info {
-        width: 75%;
-    }
-
-    .pokemon, .pokemon-info {
-        min-height: 30vh;
-        flex-direction: row;
-    }
-
-    .pokemon figure {
-        width: 40%;
-    }
-
-    .pokemon-details {
-        border-bottom: none;
-    }
-
-    .pokemon-info h4 {
-        font-size: 1.5em;    
-    }
-
-    .pokemon h2 {
-        font-size: 2em;
-    }
-
-    .pokemon-info h4 {
-        font-size: 1.25em;
-    }
-
-    .pokemon-details p {
-        flex: 0;
+    .pokedex-basic-info {
         width: 70%;
-        
+        min-height: 25vh;
+        display: flex;
     }
 
-    .numbers {
-        top: 0;        
+    .pokedex-basic-info figure {
+        width: 50%;
     }
 
-    /* Gotta Catch Em all */
-    .about {
-        padding: .5rem 0;
+    .pokedex-basic-info div {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .gcea-container img {
-        width: 20%;
+    .pokedex-basic-info p, .pokedex-advanced-info p {
+        font-size: .8em;
     }
 
-    .pokemon-entry {
-        width: 30%;
+    .pokedex-advanced-info {
+        min-height: 20vh;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
-
-
-
+    .number {
+        position: absolute;
+        top: 0;
+        right: .5rem;
+        font-size: .7em;
+    }
 }
+
