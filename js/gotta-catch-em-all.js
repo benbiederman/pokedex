@@ -1,7 +1,7 @@
 class Pokemon {
-    constructor(name, picture, element,seen, caught, number) {
+    constructor(name, img, element,seen, caught, number) {
         this.name = name;
-        this.picture = picture;
+        this.img = img;
         this.element = element;
         this.seen = seen;
         this.caught = caught;
@@ -275,7 +275,7 @@ const ditto = new Pokemon(`ditto`, `img/pokemon/ditto.jpg`, 'Normal', false, fal
 
 const eevee = new Pokemon(`eevee`, `img/pokemon/eevee.jpg`, 'Normal', false, false, 133);
 
-const vaporeon = new Pokemon(`vaporeon`, `img/vaporeon.jpg`, 'Water', false, false, 134);
+const vaporeon = new Pokemon(`vaporeon`, `img/pokemon/vaporeon.jpg`, 'Water', false, false, 134);
 
 const jolteon = new Pokemon(`jolteon`, `img/pokemon/jolteon.jpg`,'Electric', false, false, 135);
 
@@ -312,3 +312,107 @@ const mewtwo = new Pokemon(`mewtwo`, `img/pokemon/mewtwo.jpg`, 'Psychic', false,
 const mew = new Pokemon(`mew`, `img/pokemon/mew.jpg`, 'Psychic', false, false, 151);
 
 const pokemon = [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard, squirtle, wartortle, blastoise, caterpie, metapod, butterfree, weedle, kakuna, beedrill, pidgey, pidgeotto, pidgeot, rattata, raticate, spearow, fearow, ekans, arbok, pikachu, raichu, sandshrew, sandslash, nidoranF, nidorina, nidoqueen, nidoranM, nidorino, nidoking, clefairy, clefable, vulpix, ninetales, jigglypuff, wigglytuff, zubat, golbat, oddish, gloom, vileplume, paras, parasect, venonat, venomoth, diglett, dugtrio, meowth, persian, psyduck, golduck, mankey, primeape, growlithe, arcanine, poliwag, poliwhirl, poliwrath, abra, kadabra, alakazam, machop, machoke, machamp, bellsprout, weepinbell, victreebel, tentacool, tentacruel, geodude, graveler, golem, ponyta, rapidash, slowpoke, slowbro, magnemite, magneton, farfetchd, doduo, dodrio, seel, dewgong, grimer, muk, shellder, cloyster, gastly, haunter, gengar, onix, drowzee, hypno, krabby, kingler, voltorb, electrode, exeggcute, exeggutor, cubone, marowak, hitmonlee, hitmonchan, lickitung, koffing, weezing, rhyhorn, rhydon, chansey, tangela, kangaskhan, horsea, seadra, goldeen, seaking, staryu, starmie, mrMime, scyther, jynx, electabuzz, magmar, pinsir, tauros, magikarp, gyarados, lapras, ditto, eevee, vaporeon, jolteon, flareon, porygon, omanyte, omastar, kabuto, kabutops, aerodactyl, snorlax, articuno, zapdos, moltres, dratini, dragonair, dragonite, mewtwo, mew];
+
+const pokemonSection = document.querySelector('.bens-pokedex');
+buildPokedex(pokemon);
+
+dropdownMenu();
+
+function dropdownMenu() {
+    const moreBtn = document.querySelector('.more-btn');
+    const dropDownMenu = document.querySelector('.dropdown-menu');
+
+    moreBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        dropDownMenu.classList.toggle('dropdown-menu-active');
+
+        if(dropDownMenu.classList.contains('dropdown-menu-active')) {
+            moreBtn.innerHTML = 'X'
+        } else {
+            moreBtn.innerHTML = '&#9660;'
+        }
+    })
+}
+
+function buildPokedex(array) {
+    const progress = document.querySelector('.gcea-progress');
+
+    if(pokemonSection !== ''){
+        clearResults();
+    }
+
+    let pokemonSeen = 0;
+    let pokemonCaught = 0;
+    
+    for(let i = 0; i < array.length; i++) {
+        createPokemon(array[i]);
+        if(array[i].seen) {
+            pokemonSeen++
+        }
+
+        if(array[i].caught) {
+            pokemonCaught++
+        }
+    }
+
+    const seen = document.createElement('h4');
+    seen.textContent = `Seen: ${pokemonSeen}`;
+    progress.appendChild(seen);
+
+    const caught = document.createElement('h4');
+    caught.textContent = `Caught: ${pokemonCaught}`;
+    progress.appendChild(caught);
+}
+
+function createPokemon(pokemon) {
+    const newPokemon = document.createElement('div');
+    newPokemon.classList.add('pokemon');
+    switch(pokemon.element) {
+        case 'Electric':
+            newPokemon.style.backgroundColor = '#F6E184';
+            break;
+        case 'Psychic':
+            newPokemon.style.backgroundColor = '#BA8AAF';
+            break;
+        case 'Fire':
+            newPokemon.style.backgroundColor = '#EB7D75';
+            break;
+        case 'Ground':
+            newPokemon.style.backgroundColor = '#CCA986';
+            break;
+        case 'Water':
+            newPokemon.style.backgroundColor = '#7EB1D9';
+            break;
+        case 'Normal':
+            newPokemon.style.backgroundColor = '#D5CBC1';
+            break;
+        case 'Grass':
+            newPokemon.style.backgroundColor = '#94A568';
+            break;
+        default:
+            newPokemon.style.backgroundColor = '#E9E9E9';
+            break;
+    }
+
+    pokemonSection.appendChild(newPokemon);
+
+    const newFigure = document.createElement('figure');
+    newPokemon.appendChild(newFigure);
+
+    const newImage = document.createElement('img');
+    newImage.src = pokemon.img;
+    newImage.alt = pokemon.name;
+    newFigure.appendChild(newImage);
+
+    const pokemonName = document.createElement('h2');
+    pokemonName.textContent = `#${pokemon.number} - ${pokemon.name}`;
+    newPokemon.appendChild(pokemonName);
+
+}
+
+//Clears search results
+function clearResults() {
+    const container = document.querySelector('.gcea-container');
+
+    pokemonSection.removeChild(container);
+}

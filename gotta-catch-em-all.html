@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex | Search Pokemon</title>
+    <title>Gotta Catch 'Em All!</title>
 </head>
 <body>
     <header>
@@ -34,35 +34,51 @@
     <main>
         <section class="section gcea">
             <section class="about">
-                <div class="gcea-container">
-                    <img src="/img/ben.png" alt="Pokemon Red character">
-                    <div class="bio">
+                <div class="about-container">
+                    <figure>
+                        <img src="/img/ben.png" alt="Pokemon Red character">
+                    </figure>
+                    <div class="about-bio">
                         <h2>Hi, I'm Ben</h2>
                         <p>Since 1998 I've had the dream of catching 'em all. Although I'm in my 30s now, the dream is still alive and well. It's time to complete that dream. This is my Pokedex - my progress into achieving my childhood dreams and goals.</p>
                     </div>
 
-                    <div class="progress">
-                        <h4>Seen: X</h4>
-                        <h4>Caught: X</h4>
+                    <div class="gcea-progress">
+                        
                     </div>
                 </div>
+                <form autocomplete="off">
+                    <input class="search gcea-search" placeholder="Search...">
+                    <button class="search-btn gcea-go-btn go-btn">
+                        Go
+                    </button>
+                    <button class="search-btn gcea-more-btn  more-btn">
+                        &#9660;	
+                    </button>
+                </form>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li>Caught</li>
+                        <li>Uncaught</li>
+                    </ul>
+                </div>
             </section>
-            <form autocomplete="off">
-                <input class="search" placeholder="Search...">
-                <button class="search-btn go-btn">
-                    Go
-                </button>
-                <button class="search-btn more-btn">
-                    &#9660;	
-                </button>
-            </form>
-
-            <div class="bens-pokedex"></div>  
+            <section class="bens-pokedex">
+                <div class="gcea-container">
+                    <div class="pokemon">
+                        <figure>
+                            <img src="img/pokemon/blastoise.jpg">
+                        </figure>
+                        <h2>#06 - Blastoise</h2>
+                    </div>
+                </div>
+            </section>  
         </section>
     </main>
     <script src="js/apps.js"></script>
     <script src="js/gotta-catch-em-all.js"></script>   
     <footer>
+        <p>Disclaimer: Pokémon is a trademark of Nintendo. No copyright or trademark infringement is intended. This is just a fun project built for my portfolio.</p>
     </footer>
 </body>
 </html>
