@@ -151,6 +151,7 @@ h1 {
         min-height: 70vh;
         text-align: center;
         position: relative;
+        border-radius: 5px;
     }
 
     .pokedex-container h3 {
@@ -172,6 +173,7 @@ h1 {
     .search-results li {
         padding: .2em 0;
         font-size: 1.25em;
+        cursor: pointer;
     }
 
     .pokedex-basic-info {
@@ -300,6 +302,10 @@ h1 {
 
     .pokedex-basic-info figure {
         width: 50%;
+    }
+
+    .pokedex-basic-info img {
+        width: 75%;
     }
 
     .pokedex-basic-info div {

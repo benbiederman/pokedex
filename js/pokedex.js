@@ -379,7 +379,7 @@ function buildResults(pokemon) {
             pokedexContainer.style.backgroundColor = '#EB7D75';
             break;
         case 'Ground':
-            pokedexContainer.style.backgroundColor = '#8B7057';
+            pokedexContainer.style.backgroundColor = '#CCA986';
             break;
         case 'Water':
             pokedexContainer.style.backgroundColor = '#7EB1D9';
@@ -508,6 +508,11 @@ function buildResults(pokemon) {
     const weakness = document.createElement('p');
     weakness.textContent = pokemon.weakness;
     weaknessDiv.appendChild(weakness);
+
+    const number = document.createElement('p');
+    number.classList.add('number');
+    number.textContent = `${pokemon.number}/151`;
+    pokedexContainer.appendChild(number);
 }
 
 
