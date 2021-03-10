@@ -29,7 +29,7 @@ const blastoise = new Pokemon('blastoise', `img/pokemon/blastoise.jpg`, 'Water',
 
 const caterpie = new Pokemon('caterpie', `img/pokemon/caterpie.jpg`, 'Grass', true, false, 10);
 
-const metapod = new Pokemon('metapod', `img/pokemon/metapod.jpg`, 'Grass', true, true, 11);
+const metapod = new Pokemon('metapod', `img/pokemon/metapod.jpg`, 'Grass', true, false, 11);
 
 const butterfree = new Pokemon('butterfree', `img/pokemon/butterfree.jpg`,'Grass', true, false, 12);
 
@@ -317,6 +317,7 @@ const pokemonSection = document.querySelector('.bens-pokedex');
 
 pokemonProgress();
 dropDown();
+pokemonSearch();
 
 function dropDown() {
     const moreBtn = document.querySelector('.more-btn');
@@ -334,9 +335,18 @@ function dropDown() {
     })
 }
 
+function pokemonSearch() {
+    const goBtn = document.querySelector('.go-btn');
+    const searchInput = document.querySelector('input');
+    const allPokemon = document.querySelectorAll('.pokemon');
 
+    goBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let search = searchInput.value.toLowerCase();
+        let searchResults = 0;
+    })
 
-
+}
 
 
 
@@ -344,10 +354,32 @@ function pokemonProgress() {
     const container = document.createElement('div');
     container.classList.add('gcea-container');
     pokemonSection.appendChild(container);
+    let caught = 0;
+    let seen = 0;
 
+
+    //Build each pokemon
     for(let i = 0; i<pokemon.length; i++){
         createPokemon(container, pokemon[i]);
+        if(pokemon[i].seen){
+            seen++
+        }
+
+        if(pokemon[i].caught){
+            caught++
+        }
     }
+
+    //Document progress of seen/caught
+    const progress = document.querySelector('.gcea-progress');
+
+    const amountSeen = document.createElement('h4');
+    amountSeen.textContent = `Seen: ${seen}`;
+    progress.appendChild(amountSeen);
+
+    const amountCaught = document.createElement('h4');
+    amountCaught.textContent = `Caught: ${caught}`;
+    progress.appendChild(amountCaught);
 }
 
 
