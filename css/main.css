@@ -294,28 +294,20 @@ h1 {
         z-index: 20;
     }
 
+    .dropdown-menu div {
+        display: none;
+        width: 90%;
+        text-align: left;
+        margin: .5em auto;
+        font-size: 1.25em;
+    }
+
     .dropdown-menu-active {
         height: auto;
     }
 
-    .dropdown-menu ul {
-        list-style: none;
-        display: none;
-    }
-
-    .dropdown-menu-active ul {
+    .dropdown-menu-active div {
         display: block;
-    }
-
-    .dropdown-menu li {
-        padding: 1rem 0;
-        font-size: 1.25em;
-        cursor: pointer;
-        width: auto;
-    }
-
-    .dropdown-menu li:hover {
-        color: #ffef02;
     }
 
     .bens-pokedex {

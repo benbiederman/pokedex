@@ -1,5 +1,5 @@
 class Pokemon {
-    constructor(name, img, element,seen, caught, number) {
+    constructor(name, img, element, seen, caught, number) {
         this.name = name;
         this.img = img;
         this.element = element;
@@ -315,48 +315,23 @@ const pokemon = [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard
 
 const pokemonSection = document.querySelector('.bens-pokedex');
 
-pokemonProgress();
-dropDown();
 pokemonSearch();
-
-function dropDown() {
-    const moreBtn = document.querySelector('.more-btn');
-    const dropDownMenu = document.querySelector('.dropdown-menu');
-
-    moreBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        dropDownMenu.classList.toggle('dropdown-menu-active');
-
-        if(dropDownMenu.classList.contains('dropdown-menu-active')){
-            moreBtn.innerHTML = 'X'
-        } else {
-            moreBtn.innerHTML = '&#9660;'
-        }
-    })
-}
-
-function pokemonSearch() {
-    const goBtn = document.querySelector('.go-btn');
-    const searchInput = document.querySelector('input');
-    const allPokemon = document.querySelectorAll('.pokemon');
-
-    goBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        let search = searchInput.value.toLowerCase();
-        let searchResults = 0;
-    })
-
-}
-
+pokemonProgress();
+pokemonFilter(pokemon);
 
 
 function pokemonProgress() {
+
+    if(pokemonSection.innerHTML !== ''){
+        clearResults();
+    }
+
     const container = document.createElement('div');
     container.classList.add('gcea-container');
     pokemonSection.appendChild(container);
+
     let caught = 0;
     let seen = 0;
-
 
     //Build each pokemon
     for(let i = 0; i<pokemon.length; i++){
@@ -383,7 +358,56 @@ function pokemonProgress() {
 }
 
 
-//
+function pokemonSearch() {
+    let searchInput = document.querySelector('input');
+    let searchBtn = document.querySelector('.go-btn');
+    
+
+    searchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let search = searchInput.value.toLowerCase();
+        let searchResults = [];
+
+        if(pokemonSection.innerHTML !== ''){
+            clearResults();
+        }
+
+        const container = document.createElement('div');
+        container.classList.add('gcea-container');
+        pokemonSection.appendChild(container);
+
+        for(let i = 0; i < pokemon.length; i++) {
+            if(pokemon[i].name.includes(search)){
+                searchResults.push(pokemon[i]); 
+            }
+        }
+
+        for(let i = 0; i < searchResults.length; i++){
+            createPokemon(container, searchResults[i]);
+        }
+
+        searchInput.value = '';
+    })
+
+}
+
+function pokemonFilter(array) {
+    const moreBtn = document.querySelector('.more-btn');
+    const dropdown = document.querySelector('.dropdown-menu');
+    const allPokemon = document.querySelectorAll('.pokemon');
+
+    console.log(allPokemon.length);
+    console.log(array.length);
+
+    moreBtn.addEventListener('click', (e)=> {
+        e.preventDefault();
+        dropdown.classList.toggle('dropdown-menu-active');
+    })
+}
+
+
+
+//Creates each individual pokemon, adds it to the container
 function createPokemon(div, pokemon){
 
     //Creates New Pokemon
@@ -419,7 +443,7 @@ function createPokemon(div, pokemon){
     }
 
     //If caught, full color else grayscale
-    if(pokemon.caught === false) {
+    if(!pokemon.caught) {
         newPokemon.style.filter = 'grayscale(1)';
     } else {
         newPokemon.style.filter = 'grayscale(0)';
@@ -436,7 +460,7 @@ function createPokemon(div, pokemon){
     pokemonImg.alt = pokemon.name;
 
     //If seen - clear, else blurry
-    if(pokemon.seen === false){
+    if(!pokemon.seen){
         pokemonImg.style.filter = 'blur(4px)';
     } else {
         pokemonImg.style.filter = 'none';
@@ -456,4 +480,11 @@ function createPokemon(div, pokemon){
         pokemonName.textContent = '???????'
     }
     newPokemon.appendChild(pokemonName);
+}
+
+
+//Clears search results
+function clearResults(){
+    const container = document.querySelector('.gcea-container');
+    pokemonSection.removeChild(container);
 }
