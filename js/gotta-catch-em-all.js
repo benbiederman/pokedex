@@ -315,26 +315,190 @@ const pokemon = [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard
 
 const pokemonSection = document.querySelector('.bens-pokedex');
 
-pokedex(pokemon);
+numberProgress();
+pokemonProgress();
+filterDropdown();
+pokemonFilter()
 
-function pokedex(array) {
-    
-    pokemonFilter(array);
-}
+//Filter Button
+function filterDropdown() {
+    const filterBtn = document.querySelector('.primary-btn');
+    const filterOptions = document.querySelector('.filter-options');
 
-
-
-
-function pokemonFilter(array) {
-    const moreBtn = document.querySelector('.gcea-more-btn');
-    const dropdown = document.querySelector('.dropdown-menu');
-
-
-    moreBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        console.log(array)
-
+    filterBtn.addEventListener('click', (e) => {
+        filterOptions.classList.toggle('filter-options-active');
     })
 }
+
+//Seen and Caught progress
+function numberProgress(){
+    let caught = 0;
+    let seen = 0;
+
+    for(let i = 0; i < pokemon.length; i++){
+        if(pokemon[i].caught){
+            caught++;
+        }
+
+        if(pokemon[i].seen){
+            seen++
+        }
+    }
+
+    //Document progress of seen/caught
+    const progress = document.querySelector('.gcea-progress');
+
+    const amountSeen = document.createElement('h4');
+    amountSeen.textContent = `Seen: ${seen}`;
+    progress.appendChild(amountSeen);
+
+    const amountCaught = document.createElement('h4');
+    amountCaught.textContent = `Caught: ${caught}`;
+    progress.appendChild(amountCaught);
+}
+
+
+//Builds Pokedex Results, main array as default
+function pokemonProgress(array = pokemon){
+
+    //Create new container
+    const container = document.createElement('div');
+    container.classList.add('gcea-container');
+    pokemonSection.appendChild(container);
+
+    //Run through array to display new Pokemon
+    for(let i = 0; i < array.length; i++){
+        createPokemon(container, array[i])
+    }   
+}
+
+
+function pokemonFilter() {
+    const allPokemon = document.querySelectorAll('.pokemon');
+    const options = document.querySelectorAll('.filter-options input');
+    const filterOptions = document.querySelector('.filter-options');
+
+    options.forEach((option) => {
+        option.addEventListener('click', (e) => {
+            switch(e.target.id){
+                case 'all':
+                    for(let i = 0; i < pokemon.length; i++){
+                        allPokemon[i].style.display = 'block';
+                    }
+                    break;
+                case 'caught':
+                    for(let i = 0; i < pokemon.length; i++){
+                        if(pokemon[i].caught){
+                            allPokemon[i].style.display = 'block';
+                        } else {
+                            allPokemon[i].style.display = 'none';
+                        }
+                    }
+                    break;
+                case 'uncaught':
+                    for(let i = 0; i < pokemon.length; i++){
+                        if(!pokemon[i].caught){
+                            allPokemon[i].style.display = 'block';
+                        } else {
+                            allPokemon[i].style.display = 'none';
+                        }
+                    }
+                    break;
+            }
+            filterOptions.classList.remove('filter-options-active');
+        })
+
+        
+    })
+
+}
+
+
+
+
+
+
+
+
+
+//Creates each individual pokemon, adds it to the container
+function createPokemon(div, pokemon){
+
+    //Creates New Pokemon
+    const newPokemon = document.createElement('div');
+    newPokemon.classList.add('pokemon');
+
+    //Adds background color pending type
+    switch(pokemon.element) {
+        case 'Electric':
+            newPokemon.style.backgroundColor = '#F6E184';
+            break;
+        case 'Psychic':
+            newPokemon.style.backgroundColor = '#BA8AAF';
+            break;
+        case 'Fire':
+            newPokemon.style.backgroundColor = '#EB7D75';
+            break;
+        case 'Ground':
+            newPokemon.style.backgroundColor = '#CCA986';
+            break;
+        case 'Water':
+            newPokemon.style.backgroundColor = '#7EB1D9';
+            break;
+        case 'Normal':
+            newPokemon.style.backgroundColor = '#D5CBC1';
+            break;
+        case 'Grass':
+            newPokemon.style.backgroundColor = '#94A568';
+            break;
+        default:
+            newPokemon.style.backgroundColor = '#E9E9E9';
+            break;
+    }
+
+    //If caught, full color else grayscale
+    if(!pokemon.caught) {
+        newPokemon.style.filter = 'grayscale(1)';
+    } else {
+        newPokemon.style.filter = 'grayscale(0)';
+    }
+    div.appendChild(newPokemon);
+
+    //Add Pokemon Figure
+    const pokemonFigure = document.createElement('figure');
+    newPokemon.appendChild(pokemonFigure);
+
+    //Add Pokemon Image
+    const pokemonImg = document.createElement('img');
+    pokemonImg.src = pokemon.img;
+    pokemonImg.alt = pokemon.name;
+
+    //If seen - clear, else blurry
+    if(!pokemon.seen){
+        pokemonImg.style.filter = 'blur(4px)';
+    } else {
+        pokemonImg.style.filter = 'none';
+    }
+    pokemonFigure.appendChild(pokemonImg);
+
+    //Add Number
+    const pokemonNumber = document.createElement('h3');
+    pokemonNumber.textContent = `- ${pokemon.number} -`;
+    newPokemon.appendChild(pokemonNumber);
+
+    //Add Name
+    const pokemonName = document.createElement('h2');
+    if(pokemon.seen) {
+        pokemonName.textContent = pokemon.name;
+    } else {
+        pokemonName.textContent = '???????'
+    }
+    newPokemon.appendChild(pokemonName);
+}
+
+
+
+
+
 
 

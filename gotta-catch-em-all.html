@@ -45,27 +45,21 @@
 
                     <div class="gcea-progress"></div>
                 </div>
-                <form autocomplete="off">
-                    <input class="search gcea-search" placeholder="Search...">
-                    <button class="search-btn gcea-go-btn go-btn">
-                        Go
-                    </button>
-                    <button class="search-btn gcea-more-btn more-btn">
-                        &#9660;	
-                    </button>
-                </form>
-                <div class="dropdown-menu">
-                        <div>
-                            <input type="checkbox" id="caught" name="caught">
-                            <label for="caught">Caught</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="uncaught" name="uncaught">
-                            <label for="uncaught">Uncaught</label>
-                        </div>
-                </div>
             </section>
+            <div class="filter">
+                <button class="primary-btn">Filter &#9660;</button>
+                <div class="filter-options">
+                    <div>
+                        <input type="radio" id="all" name="option" value="all" checked><label for="all">All</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="caught" name="option" value="caught"><label for="caught">Caught</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="uncaught" name="option" value="uncaught"><label for="uncaught">Uncaught</label>
+                    </div>
+                </div>
+            </div>
             <section class="bens-pokedex"></section>  
         </section>
     </main>
