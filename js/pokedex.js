@@ -144,7 +144,7 @@ const dewgong = new Pokemon(`dewgong`, `img/pokemon/dewgong.jpg`, `Seel hunts fo
 
 const seel = new Pokemon(`seel`, `img/pokemon/seel.jpg`, `Seel hunts for prey in the frigid sea underneath sheets of ice. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head.`, 'Water', 'Grass, Electric', [dewgong], 'Normal', 34, 86);
 
-const dodrio = new Pokemon(`dodrio`, `img/pokemon/doduo.jpg`, `Watch out if Dodrio's three heads are looking in three separate directions. It's a sure sign that it is on its guard. Don't go near this Pokémon if it's being wary—it may decide to peck you.`, 'Normal', 'Ice, Rock, Electric', false,'Normal', false, 85);
+const dodrio = new Pokemon(`dodrio`, `img/pokemon/dodrio.jpg`, `Watch out if Dodrio's three heads are looking in three separate directions. It's a sure sign that it is on its guard. Don't go near this Pokémon if it's being wary—it may decide to peck you.`, 'Normal', 'Ice, Rock, Electric', false,'Normal', false, 85);
 
 const doduo = new Pokemon(`doduo`, `img/pokemon/doduo.jpg`, `Doduo's two heads never sleep at the same time. Its two heads take turns sleeping, so one head can always keep watch for enemies while the other one sleeps.`, 'Normal', 'Ice, Rock, Electric', [dodrio], 'Normal', 31, 84);
 
