@@ -292,6 +292,7 @@ h1 {
         color: #fcfcfc;
         font-family: "Didact Gothic";
         font-size: 1.25em;
+        border-radius: 5px;
     }
 
     .filter-options {
@@ -353,7 +354,84 @@ h1 {
 
     /* WTP - Mobile */
     .wtp {
-        min-height: 90vh;
+        min-height: 80vh;
+        text-align: center;
+    }
+
+    .wtp-container {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .wtp-intro-img {
+        width: 70%;
+        margin: 0 auto;
+        min-height: 70vw;
+        background-image: url(/img/wtp/wartortle-hidden.jpg);
+        background-size: cover;
+        background-position: center;
+        border: 4px solid #cacaca;
+        border-radius: 5px;
+    }
+
+    @keyframes imgFade {
+        from {
+            background-image: url(/img/wtp/wartortle-hidden.jpg);
+        }
+        to {
+            background-image: url(/img/wtp/wartortle.jpg);
+        }
+    }   
+
+    .wtp-container h2 {
+        font-family: "Didact Gothic";
+        text-transform: uppercase;
+        margin: 1rem 0;
+        font-size: 1.75em;
+    }
+
+    .btn-primary {
+        min-width: 50vw;
+        padding: .5rem .2rem;
+        margin: 1rem auto;
+        min-height: 5vh;
+        background-color: #111;
+        color: #fcfcfc;
+        border-radius: 5px;
+        font-family: "Didact Gothic";
+        font-size: 1.5em;
+    }
+
+    .instructions-popup {
+        position: absolute;
+        top: 2.5vh;
+        left: 5vw;
+        width: 90vw;
+        min-height: 70vh;
+        background-color: #e9e9e9;
+        border: 2px solid #111;
+        display: none;
+    }
+
+    .instructions-popup h3 {
+        font-family: "Didact Gothic";
+        font-size: 1.75em;
+        text-transform: uppercase;
+        margin-top: 1rem;
+    }
+
+    .instructions-popup p {
+        font-family: "Didact Gothic";
+        font-size: 1.25em;
+        width: 80%;
+        margin: 1rem auto;
+        text-align: left;
+    }
+
+    .pop-btn {
+        margin-top: 3rem;    
     }
 
 
@@ -440,6 +518,32 @@ h1 {
     .gcea-container {
         width: 95%;
         margin: 0 auto;
+    }
+
+    /* WTP - Tablet */
+    .wtp {
+        min-height: 90vh;
+    }
+
+    .wtp-intro-img {
+        width: 50%;
+        margin: 1rem auto;
+        min-height: 50vw;
+    }
+
+    .btn-primary {
+        min-width: 30vw;
+    }
+
+    .instructions-popup {
+        top: 10vh;
+        left: 22.5vw;
+        width: 55vw;
+        min-height: 55vh;
+    }
+
+    .instructions-popup p {
+        width: 60%;
     }
     
 }
@@ -534,6 +638,23 @@ h1 {
 
     .filter-options {
         min-width: 20vw;
+    }
+
+    /* WTP - Desktop */
+    .wtp-intro-img {
+        width: 20vw;
+        min-height: 20vw;
+    }
+
+    .btn-primary {
+        min-width: 15vw;
+    }
+
+    .instructions-popup {
+        left: 35vw;
+        width: 30vw;
+        min-height: 70vh;
+        
     }
 }
 

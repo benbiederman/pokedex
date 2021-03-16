@@ -33,9 +33,9 @@ const metapod = new Pokemon('metapod', `img/pokemon/metapod.jpg`, 'Grass', true,
 
 const butterfree = new Pokemon('butterfree', `img/pokemon/butterfree.jpg`,'Grass', true, false, 12);
 
-const weedle = new Pokemon('weedle', `img/pokemon/weedle.jpg`, 'Grass', true, false, 13);
+const weedle = new Pokemon('weedle', `img/pokemon/weedle.jpg`, 'Grass', true, true, 13);
 
-const kakuna = new Pokemon('kakuna', `img/pokemon/kakuna.jpg`, 'Grass', true, false, 14);
+const kakuna = new Pokemon('kakuna', `img/pokemon/kakuna.jpg`, 'Grass', true, true, 14);
 
 const beedrill = new Pokemon('beedrill', `img/pokemon/beedrill.jpg`, 'Grass',  true, false, 15);
 
@@ -381,11 +381,14 @@ function pokemonFilter() {
     options.forEach((option) => {
         option.addEventListener('click', (e) => {
             switch(e.target.id){
+                //If all is selected
                 case 'all':
                     for(let i = 0; i < pokemon.length; i++){
                         allPokemon[i].style.display = 'block';
                     }
                     break;
+
+                //If caught is selected
                 case 'caught':
                     for(let i = 0; i < pokemon.length; i++){
                         if(pokemon[i].caught){
@@ -395,6 +398,8 @@ function pokemonFilter() {
                         }
                     }
                     break;
+                
+                //If uncaught is selected
                 case 'uncaught':
                     for(let i = 0; i < pokemon.length; i++){
                         if(!pokemon[i].caught){
@@ -405,6 +410,7 @@ function pokemonFilter() {
                     }
                     break;
             }
+            //Remove active
             filterOptions.classList.remove('filter-options-active');
         })
 
@@ -412,12 +418,6 @@ function pokemonFilter() {
     })
 
 }
-
-
-
-
-
-
 
 
 
