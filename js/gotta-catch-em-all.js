@@ -85,7 +85,7 @@ const vulpix = new Pokemon('vulpix', `img/pokemon/vulpix.jpg`, 'Fire', true, fal
 
 const ninetales = new Pokemon('ninetales', `img/pokemon/ninetales.jpg`, 'Fire', false, false, 38);
 
-const jigglypuff = new Pokemon('jigglypuff', `img/pokemon/jigglypuff.jpg`, 'Normal', true, false, 39);
+const jigglypuff = new Pokemon('jigglypuff', `img/pokemon/jigglypuff.jpg`, 'Normal', true, true, 39);
 
 const wigglytuff = new Pokemon('wigglytuff', `img/pokemon/wigglytuff.jpg`, 'Normal', false, false, 40);
 
@@ -93,7 +93,7 @@ const zubat = new Pokemon('zubat', `img/pokemon/zubat.jpg`, 'Grass', true, true,
 
 const golbat = new Pokemon('golbat', `img/pokemon/golbat.jpg`, 'Grass', false, false, 42);
 
-const oddish = new Pokemon('oddish', `img/pokemon/oddish.jpg`, 'Grass', true, false, 43);
+const oddish = new Pokemon('oddish', `img/pokemon/oddish.jpg`, 'Grass', true, true, 43);
 
 const gloom = new Pokemon('gloom', `img/pokemon/gloom.jpg`, 'Grass', true, false, 44);
 
@@ -119,11 +119,11 @@ const psyduck = new Pokemon('psyduck', `img/pokemon/psyduck.jpg`, 'Water', false
 
 const golduck = new Pokemon('golduck', `img/pokemon/golduck.jpg`, 'Water', false, false, 55);
 
-const mankey = new Pokemon('mankey', `img/pokemon/mankey.jpg`, 'Ground', true, false, 56);
+const mankey = new Pokemon('mankey', `img/pokemon/mankey.jpg`, 'Ground', true, true, 56);
 
 const primeape = new Pokemon('primeape', `img/pokemon/primeape.jpg`, 'Ground', false, false, 57);
 
-const growlithe = new Pokemon(`growlithe`, `img/pokemon/growlithe.jpg`, 'Fire', true, false, 58);
+const growlithe = new Pokemon(`growlithe`, `img/pokemon/growlithe.jpg`, 'Fire', true, true, 58);
 
 const arcanine = new Pokemon(`arcanine`, `img/pokemon/arcanine.jpg`, 'Fire', false, false, 59);
 
@@ -139,7 +139,7 @@ const kadabra = new Pokemon(`kadabra`, `img/pokemon/kadabra.jpg`,'Psychic', true
 
 const alakazam = new Pokemon(`alakazam`, `img/pokemon/alakazam.jpg`, 'Psychic', false, false, 65);
 
-const machop = new Pokemon(`machop`, `img/pokemon/machop.jpg`, 'Ground', true, false, 66);
+const machop = new Pokemon(`machop`, `img/pokemon/machop.jpg`, 'Ground', true, true, 66);
 
 const machoke = new Pokemon(`machoke`, `img/pokemon/machoke.jpg`, 'Ground', false, false, 67);
 
