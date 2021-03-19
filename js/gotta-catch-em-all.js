@@ -57,7 +57,7 @@ const ekans = new Pokemon('ekans', `img/pokemon/ekans.jpg`, 'Grass', true, true,
 
 const arbok = new Pokemon('arbok', `img/pokemon/arbok.jpg`, 'Grass', true, false, 24);
 
-const pikachu = new Pokemon('pikachu', `img/pokemon/pikachu.jpg`, 'Electric', true, false, 25);
+const pikachu = new Pokemon('pikachu', `img/pokemon/pikachu.jpg`, 'Electric', true, true, 25);
 
 const raichu = new Pokemon('raichu', `img/pokemon/raichu.jpg`, 'Electric', true, false, 26);
 
@@ -99,7 +99,7 @@ const gloom = new Pokemon('gloom', `img/pokemon/gloom.jpg`, 'Grass', true, false
 
 const vileplume = new Pokemon('vileplume', `img/pokemon/vileplume.jpg`, 'Grass', true, false, 45);
 
-const paras = new Pokemon('paras', `img/pokemon/paras.jpg`, 'Grass', false, false, 46);
+const paras = new Pokemon('paras', `img/pokemon/paras.jpg`, 'Grass', true, true, 46);
 
 const parasect = new Pokemon('parasect', `img/pokemon/parasect.jpg`, 'Grass', false, false, 47);
 
@@ -193,11 +193,11 @@ const cloyster = new Pokemon(`cloyster`, `img/pokemon/cloyster.jpg`, 'Water', fa
 
 const gastly = new Pokemon(`gastly`, `img/pokemon/gastly.jpg`, 'Psychic', true, true, 92);
 
-const haunter = new Pokemon(`haunter`, `img/pokemon/haunter.jpg`,  'Psychic', false, false, 93);
+const haunter = new Pokemon(`haunter`, `img/pokemon/haunter.jpg`,  'Psychic', true, true, 93);
 
 const gengar = new Pokemon(`gengar`, `img/pokemon/gengar.jpg`, 'Psychic', false, false, 94);
 
-const onix = new Pokemon(`onix`, `img/pokemon/onix.jpg`, 'Ground', true, false, 95);
+const onix = new Pokemon(`onix`, `img/pokemon/onix.jpg`, 'Ground', true, true, 95);
 
 const drowzee = new Pokemon(`drowzee`, `img/pokemon/drowzee.jpg`, 'Psychic', true, true, 96);
 
@@ -207,7 +207,7 @@ const krabby = new Pokemon(`krabby`, `img/pokemon/krabby.jpg`, 'Water', false, f
 
 const kingler = new Pokemon(`kingler`, `img/pokemon/kingler.jpg`, 'Water', false, false, 99);
 
-const voltorb = new Pokemon(`voltorb`, `img/pokemon/voltorb.jpg`, 'Electric', true, false, 100);
+const voltorb = new Pokemon(`voltorb`, `img/pokemon/voltorb.jpg`, 'Electric', true, true, 100);
 
 const electrode = new Pokemon(`electrode`, `img/pokemon/electrode.jpg`, 'Electric', false, false, 101);
 
@@ -219,9 +219,9 @@ const cubone = new Pokemon(`cubone`, `img/pokemon/cubone.jpg`, 'Ground', true, f
 
 const marowak = new Pokemon(`marowak`, `img/pokemon/marowak.jpg`, 'Ground', false, false, 105);
 
-const hitmonlee = new Pokemon(`hitmonlee`, `img/pokemon/hitmonlee.jpg`, 'Ground', false, false, 106);
+const hitmonlee = new Pokemon(`hitmonlee`, `img/pokemon/hitmonlee.jpg`, 'Ground', true, false, 106);
 
-const hitmonchan = new Pokemon(`hitmonchan`, `img/pokemon/hitmonchan.jpg`, 'Ground', false, false, 107);
+const hitmonchan = new Pokemon(`hitmonchan`, `img/pokemon/hitmonchan.jpg`, 'Ground', true, true, 107);
 
 const lickitung = new Pokemon(`lickitung`, `img/pokemon/lickitung.jpg`, 'Normal', false, false, 108);
 

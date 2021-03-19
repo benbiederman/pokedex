@@ -352,13 +352,6 @@ h1 {
         margin: 2.5% 0;
     }
 
-    /* WTP - Mobile */
-    .wtp {
-        min-height: 80vh;
-        text-align: center;
-    }
-
-
 
     /* Footer Section - Mobile */
     footer {
@@ -442,12 +435,6 @@ h1 {
         width: 95%;
         margin: 0 auto;
     }
-
-    /* WTP - Tablet */
-    .wtp {
-        min-height: 90vh;
-    }
-
     
 }
 
@@ -542,8 +529,5 @@ h1 {
     .filter-options {
         min-width: 20vw;
     }
-
-    /* WTP - Desktop */
-  
 }
 

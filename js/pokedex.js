@@ -140,7 +140,7 @@ const muk = new Pokemon(`muk`, `img/pokemon/muk.jpg`, `From Muk's body seeps a f
 
 const grimer = new Pokemon(`grimer`, `img/pokemon/grimer.jpg`, `Grimer's sludgy and rubbery body can be forced through any opening, however small it may be. This Pokémon enters sewer pipes to drink filthy wastewater.`, 'Grass', 'Psychic, Ground', [muk], 'Normal', 38, 88);
 
-const dewgong = new Pokemon(`dewgong`, `img/pokemon/dewgong.jpg`, `Seel hunts for prey in the frigid sea underneath sheets of ice. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head.`, 'Water', 'Fighting, Rock, Electric, Grass', false,'Normal', false, 87);
+const dewgong = new Pokemon(`dewgong`, `img/pokemon/dewgong.jpg`, `Dewgong loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago.`, 'Water', 'Fighting, Rock, Electric, Grass', false,'Normal', false, 87);
 
 const seel = new Pokemon(`seel`, `img/pokemon/seel.jpg`, `Seel hunts for prey in the frigid sea underneath sheets of ice. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head.`, 'Water', 'Grass, Electric', [dewgong], 'Normal', 34, 86);
 
