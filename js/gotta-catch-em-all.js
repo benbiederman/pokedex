@@ -19,7 +19,7 @@ const charmander = new Pokemon('charmander', `img/pokemon/charmander.jpg`, 'Fire
 
 const charmeleon = new Pokemon('charmeleon', `img/pokemon/charmeleon.jpg`, 'Fire', true, true, 05);
 
-const charizard = new Pokemon('charizard', `img/pokemon/charizard.jpg`, 'Fire', false, false, 06);
+const charizard = new Pokemon('charizard', `img/pokemon/charizard.jpg`, 'Fire', true, true, 06);
 
 const squirtle = new Pokemon('squirtle', `img/pokemon/squirtle.jpg`, 'Water', true, true, 07);
 
